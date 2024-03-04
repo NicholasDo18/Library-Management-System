@@ -1,0 +1,112 @@
+#Description of the project
+The Library Management System (LMS) is a software application designed to help librarians efficiently manage library resources, including books, patrons, transactions, and reports. Here's a description of the project:
+
+Features:
+
+Add Book: Librarians can add new books to the library by providing details such as title, author, ISBN, and quantity.
+Add Patron: Librarians can add new patrons to the library by providing their name and ID. Optionally, contact information can be added.
+Check Out Book: Patrons can check out books from the library by providing the book's ISBN and their patron ID. The system records the transaction and sets a due date for the return of the book.
+Check In Book: Patrons can return books to the library by providing the book's ISBN. The system updates the book's status and removes the transaction record.
+Generate Reports: Librarians can generate various reports, such as a list of all books in the library, a list of checked out books, and other statistical reports.
+User Authentication: The system supports role-based access control with different levels of access for administrators and librarians.
+Implementation:
+
+The system is implemented in Python programming language.
+It utilizes classes to represent books, patrons, transactions, and users (librarians).
+Data storage is handled using file-based systems (e.g., CSV or JSON) to persistently store book and patron information.
+A command-line interface (CLI) is provided for user interaction. The CLI guides users through various functionalities of the system.
+The system ensures data integrity and validation to prevent inconsistencies and errors.
+Usage:
+
+Users interact with the system through the command-line interface (CLI) by selecting options from the menu.
+Librarians can perform administrative tasks such as adding books, adding patrons, and generating reports.
+Patrons can check out books and return them using their patron ID.
+Purpose:
+
+The purpose of the Library Management System is to automate and streamline library operations, making it easier for librarians to manage resources and for patrons to access library materials efficiently.
+By providing features such as book checkout, return, and reporting functionalities, the system aims to enhance the overall experience for both librarians and patrons.
+Overall, the Library Management System is a comprehensive solution for managing library resources effectively, providing essential functionalities for both administrators and users.
+
+#Structure of the code with diagram and some comments regarding structure
+Below is the structure of the Library Management System (LMS) code with comments and a simplified diagram representing the main components:
+
+library_management_system/
+│
+├── main.py                 # Main entry point of the application
+├── library.py              # Contains the Library class for managing books, patrons, transactions, and users
+├── user.py                 # Contains the User class for representing users (librarians)
+├── cli.py                  # Contains the CLI class for handling user interaction
+├── data/                   # Directory for storing data files
+│   ├── books.csv           # CSV file for storing book information
+│   ├── patrons.csv         # CSV file for storing patron information
+│   └── transactions.csv    # CSV file for storing transaction information
+└── README.md               # Documentation and project description
+
+Comments on the Structure:
+main.py: This file serves as the main entry point of the application. It initializes the Library object, creates an instance of the CLI class, and starts the CLI interface for user interaction.
+library.py: This file contains the Library class, which is responsible for managing books, patrons, transactions, and users. It includes methods for adding, updating, and removing books and patrons, as well as handling transactions and generating reports. Data storage is implemented using file-based systems such as CSV files.
+user.py: This file defines the User class, which represents users (librarians) of the system. Each user has attributes such as username, password, and role (e.g., admin or librarian).
+cli.py: This file contains the CLI class, which handles the command-line interface for user interaction. It displays a menu with options for different functionalities and calls the corresponding methods in the Library class based on user input.
+data/: This directory stores data files used by the application. These files include information about books, patrons, and transactions, stored in CSV format for persistence.
+
+Here is the Diagram.
+             +------------+
+             |   main.py  |
+             +------+-----+
+                    |
+                    v
+             +------+-----+
+             |   CLI     |
+             +------+-----+
+                    |
+                    v
+             +------+-----+
+             |  Library  |
+             +------+-----+
+             |   User    |
+             +------------+
+This simplified diagram illustrates the flow of control in the application, starting from the main entry point (main.py) to the CLI interface, which interacts with the Library class for managing library operations. The Library class interacts with the User class for user authentication and data storage.
+
+#Instructions on how to use it for full functionalities provided by your code.
+Run the Program:
+Open a terminal or command prompt.
+Navigate to the directory where the code files (main.py, library.py, user.py, cli.py, data/) are located.
+Run the command python main.py to start the program.
+
+Login:
+Upon running the program, you will be prompted to login.
+Use the predefined usernames and passwords to login as either an administrator or a librarian.
+Accessing Functionalities:
+After logging in, you will see a menu with options to perform various tasks.
+
+Adding Books:
+Choose the "Add Book" option from the menu.
+Enter the details of the book when prompted: title, author, ISBN, and quantity.
+
+Adding Patrons:
+Choose the "Add Patron" option from the menu.
+Enter the details of the patron when prompted: name and ID.
+
+Checking Out Books:
+Choose the "Check Out Book" option from the menu.
+Enter the ISBN of the book to check out.
+Enter the patron ID of the patron who is checking out the book.
+
+Checking In Books:
+Choose the "Check In Book" option from the menu.
+Enter the ISBN of the book to check in.
+
+Generating Reports:
+Choose the "Generate Reports" option from the menu.
+The system will generate and display various reports, such as a list of all books in the library and a list of checked out books.
+
+Exiting the Program:
+To exit the program, choose the "Exit" option from the menu.
+
+Data Persistence:
+Data such as book information, patron information, and transaction records are stored persistently in CSV files under the data/ directory.
+This allows the data to be retained between different sessions of running the program.
+
+#Discuss your findings through this project, challenges faced during implementation, any limitations or areas for improvement
+Some findings I found in this project are effective organization and user authentication. Some challenges I faced throughout the project were data validation and error handling.  Implementing robust data validation mechanisms to ensure the integrity of user inputs and prevent data corruption posed a challenge. 
+Areas to improve this project is database integration. Integrating a database management system (e.g., SQLite, MySQL) for data storage could improve scalability, performance, and reliability.
