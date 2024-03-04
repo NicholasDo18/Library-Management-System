@@ -4,25 +4,30 @@ The Library Management System (LMS) is a software application designed to help l
 Features:
 
 Add Book: Librarians can add new books to the library by providing details such as title, author, ISBN, and quantity.
-Add Patron: Librarians can add new patrons to the library by providing their name and ID. Optionally, contact information can be added.
-Check Out Book: Patrons can check out books from the library by providing the book's ISBN and their patron ID. The system records the transaction and sets a due date for the return of the book.
-Check In Book: Patrons can return books to the library by providing the book's ISBN. The system updates the book's status and removes the transaction record.
-Generate Reports: Librarians can generate various reports, such as a list of all books in the library, a list of checked out books, and other statistical reports.
-User Authentication: The system supports role-based access control with different levels of access for administrators and librarians.
-Implementation:
 
+Add Patron: Librarians can add new patrons to the library by providing their name and ID. Optionally, contact information can be added.
+
+Check Out Book: Patrons can check out books from the library by providing the book's ISBN and their patron ID. The system records the transaction and sets a due date for the return of the book.
+
+Check In Book: Patrons can return books to the library by providing the book's ISBN. The system updates the book's status and removes the transaction record.
+
+Generate Reports: Librarians can generate various reports, such as a list of all books in the library, a list of checked out books, and other statistical reports.
+
+User Authentication: The system supports role-based access control with different levels of access for administrators and librarians.
+
+Implementation:
 The system is implemented in Python programming language.
 It utilizes classes to represent books, patrons, transactions, and users (librarians).
 Data storage is handled using file-based systems (e.g., CSV or JSON) to persistently store book and patron information.
 A command-line interface (CLI) is provided for user interaction. The CLI guides users through various functionalities of the system.
 The system ensures data integrity and validation to prevent inconsistencies and errors.
-Usage:
 
+Usage:
 Users interact with the system through the command-line interface (CLI) by selecting options from the menu.
 Librarians can perform administrative tasks such as adding books, adding patrons, and generating reports.
 Patrons can check out books and return them using their patron ID.
-Purpose:
 
+Purpose:
 The purpose of the Library Management System is to automate and streamline library operations, making it easier for librarians to manage resources and for patrons to access library materials efficiently.
 By providing features such as book checkout, return, and reporting functionalities, the system aims to enhance the overall experience for both librarians and patrons.
 Overall, the Library Management System is a comprehensive solution for managing library resources effectively, providing essential functionalities for both administrators and users.
